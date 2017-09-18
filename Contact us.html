@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<link href="decibel.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="http://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+var myCenter=new google.maps.LatLng(28.5318899,77.05869499999994);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:5,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"Amity School of Engineering & Technology"
+  });
+
+google.maps.event.addListener(marker, 'click', function() {
+  infowindow.open(map,marker);
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+<div class="header" > <a href="index.html"><img src="images/decibel.png" class="header-image"></a>  </div>
+<nav class="navbar navbar-default"> 
+  
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <a class="navbar-brand" href="index.html">DECIBEL</a></div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="defaultNavbar1">
+    <ul class="nav navbar-nav">
+      <li ><a href="Achievements.html">Achievements<span class="sr-only">(current)</span></a></li>
+      <li ><a href="coreTeam.html">Core Team<span class="sr-only">(current)</span></a></li>
+      <li ><a href="events.html">Events<span class="sr-only">(current)</span></a></li>
+      <li ><a href="Gallery.html">Gallery<span class="sr-only">(current)</span></a></li>
+      <li ><a href="sponsor.html">Sponsors<span class="sr-only">(current)</span></a></li>
+      <li ><a href="Contact us.html">Contact us<span class="sr-only">(current)</span></a></li>
+      <!--   <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Teams<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>-->
+      </li>
+    </ul>
+    
+    <!-- <ul class="nav navbar-nav navbar-right">
+    		<li ><a href="#">Login<span class="sr-only">(current)</span></a></li>
+            <li ><a href="#">Sign Up<span class="sr-only">(current)</span></a></li>
+       
+      </ul>--> 
+  </div>
+  <!-- /.navbar-collapse --> 
+  
+  <!-- /.container-fluid --> 
+</nav>
+<div class="container-contact">
+  <div class="heading-contact">
+    <h2> CONTACT US</h2>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <div id="googleMap" style="width:100%;height:380px;float:left;"></div>
+    </div>
+    <div class="col-lg-6" style="display:inline;">
+      <pre>
+         Visit Us At:-
+	DECIBEL,
+	Amity School of Engineering & Technology,
+	Bijwasan,New Delhi	
+																														
+	FOR MORE DETAILS 
+	CONTACT:
+
+	SAKSHI MEHTA
+	(Student Activity Head)	
+	I.T-3rd Yr    
+	Mob:+91-9910137571    		
+
+	HARSH SHARMA
+	Student Activity Head)
+	I.T-3rd Yr                          
+	Mob:+91-8882835518
+    </pre>
+    </div>
+  </div>
+</div>
+<div class="Like-facebook"><a href="http://facebook.com/decibel.aset" style="float:center;" >
+  <hr style="height:2px; border:none; background-color:black; margin-left:20px; margin-right:20px;">
+  <img src="images/facebook-icon.png" style="box-shadow:4px 2px 6px #010101; border: none;"></a> <br>
+  Like us on Facebook for regular updates. </div>
+</pre>
+<div class="footer" >
+  <div class="Developers" >
+    <h4>DEVELOPERS</h4>
+    <div class="Developers-image-div"> <img src="images/UTK.jpg" class="img-circle" alt="utkarsh" > <img src="images/ME.jpg" class="img-circle" alt="lopa" > <img src="images/SAK.jpg" class="img-circle" alt="sakshi" > </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
